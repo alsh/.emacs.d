@@ -9,8 +9,8 @@
      default))
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(aidermacs c++-ts-mode consult corfu dap-mode ef-themes eink-emacs
-	       eink-theme lsp-mode lsp-ui marginalia orderless vertico
+   '(aidermacs bitbake-ts-mode cmake-mode consult corfu dap-mode
+	       ef-themes lsp-ui magit marginalia orderless vertico
 	       yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -1,4 +1,6 @@
 
+(use-package bitbake-ts-mode :ensure t)
+
 (use-package lsp-mode
   :ensure t
   :init
@@ -20,3 +22,5 @@
 (use-package yasnippet
   :ensure t
   :hook ((lsp-mode . yas-minor-mode)))
+
+(use-package magit :ensure t)

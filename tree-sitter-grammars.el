@@ -1,6 +1,7 @@
 (setq treesit-language-source-alist
       '((ada        "https://github.com/tree-sitter/tree-sitter-ada")
         (bash       "https://github.com/tree-sitter/tree-sitter-bash")
+	(bitbake    "https://github.com/tree-sitter-grammars/tree-sitter-bitbake")
         (c          "https://github.com/tree-sitter/tree-sitter-c")
         (cpp        "https://github.com/tree-sitter/tree-sitter-cpp")
         (csharp     "https://github.com/tree-sitter/tree-sitter-c-sharp")
