@@ -10,8 +10,8 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    '(aidermacs bitbake-ts-mode cmake-mode consult corfu dap-mode
-	       ef-themes lsp-ui magit marginalia orderless vertico
-	       yasnippet)))
+	       ef-themes groovy-mode lsp-ui magit marginalia orderless
+	       vertico yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

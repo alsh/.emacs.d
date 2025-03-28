@@ -16,6 +16,9 @@
 ;; Key bindings and operation
 (windmove-default-keybindings)
 
+;; Global modes
+(global-auto-revert-mode)
+
 ;; (use-package ido
 ;;   :config
 ;;   (ido-mode t))

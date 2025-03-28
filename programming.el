@@ -1,5 +1,6 @@
 
 (use-package bitbake-ts-mode :ensure t)
+(use-package groovy-mode :ensure t)
 
 (use-package lsp-mode
   :ensure t
