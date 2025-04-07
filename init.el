@@ -19,14 +19,20 @@
 ;; Global modes
 (global-auto-revert-mode)
 
-;; (use-package ido
-;;   :config
-;;   (ido-mode t))
-
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (load-config "complete.el")
 (load-config "ai.el")
 (load-config "programming.el")
+
+(use-package direnv
+  :ensure t
+  :config
+  (direnv-mode))
+
+(use-package yaml-mode
+  :ensure t
+  :mode "\\.yml\\'"
+  )
 
 (use-package emacs
   :custom
