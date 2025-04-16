@@ -1,7 +1,14 @@
+(defun get-secret-safely (collection key)
+  "Retrieve a secret using secrets-get-secret, handling errors.
+Return the secret string or an empty string if not found or on error."
+  (or (condition-case err
+          (secrets-get-secret collection key)
+        (error (message "Error getting secret '%s' from collection '%s': %s" key collection err) nil))
+      ""))
 
-(setq secret-token-openai (or (secrets-get-secret "Login" "openai-home-key") ""))
-(setq secret-token-gemini (or (secrets-get-secret "Login" "gemini-api-key") ""))
-(setq secret-token-openrouter (or (secrets-get-secret "Login" "openrouter-aider") ""))
+(setq secret-token-openai (get-secret-safely "Login" "openai-home-key"))
+(setq secret-token-gemini (get-secret-safely "Login" "gemini-api-key"))
+(setq secret-token-openrouter (get-secret-safely "Login" "openrouter-aider"))
 
 (use-package aidermacs
   :ensure t
