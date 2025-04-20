@@ -28,11 +28,6 @@
 (load-config "ai.el")
 (load-config "programming.el")
 
-(use-package direnv
-  :ensure t
-  :config
-  (direnv-mode))
-
 (use-package yaml-mode
   :ensure t
   :mode "\\.yml\\'"

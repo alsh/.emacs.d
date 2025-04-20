@@ -1,6 +1,6 @@
 ;; Prefer tree-sitter modes when available
-;; (setq major-mode-remap-alist
-;;      '((python-mode . python-ts-mode)))
+(setq major-mode-remap-alist
+      '((python-mode . python-ts-mode)))
 
 (use-package bitbake-ts-mode :ensure t)
 (use-package groovy-mode :ensure t)
@@ -31,20 +31,7 @@
   ;; Load dap-python *after* dap-mode is loaded and configured
   (require 'dap-python)
   ;; Define Python debug templates
-  (dap-register-debug-template
-   "Python :: Run script"
-   (list :type "python"
-         :request "launch"
-         :name "Python :: Run script"
-         :program "${file}"))
-  (dap-register-debug-template
-   "Python :: Run module"
-   (list :type "python"
-         :request "launch"
-         :name "Python :: Run module"
-         ;; Wrap read-from-minibuffer in lambda to defer execution
-         :module (lambda () (read-from-minibuffer "Python module: "))
-         :args (lambda () (read-from-minibuffer "Arguments: ")))))
+  )
 
 ;; Removed the separate dap-python block as its config is now merged above
 
@@ -53,3 +40,8 @@
   :hook ((lsp-mode . yas-minor-mode)))
 
 (use-package magit :ensure t)
+
+(use-package direnv
+  :ensure t
+  :config
+  (direnv-mode))
