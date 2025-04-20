@@ -1,3 +1,6 @@
+;; Prefer tree-sitter modes when available
+;; (setq major-mode-remap-alist
+;;      '((python-mode . python-ts-mode)))
 
 (use-package bitbake-ts-mode :ensure t)
 (use-package groovy-mode :ensure t)
@@ -12,13 +15,38 @@
 	 (c++-mode . lsp)
 	 (c-ts-mode . lsp)
 	 (c++-ts-mode . lsp)
+         (python-ts-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 
 (use-package lsp-ui :ensure t :commands lsp-ui-mode)
 (use-package lsp-treemacs :ensure t :commands lsp-treemacs-errors-list)
-(use-package dap-mode :ensure t)
+(use-package lsp-pyright :ensure t)
+
+(use-package dap-mode
+  :ensure t
+  :config
+  (setq dap-python-debugger 'debugpy) ;; Explicitly use debugpy
+  ;; Load dap-python *after* dap-mode is loaded and configured
+  (require 'dap-python)
+  ;; Define Python debug templates
+  (dap-register-debug-template
+   "Python :: Run script"
+   (list :type "python"
+         :request "launch"
+         :name "Python :: Run script"
+         :program "${file}"))
+  (dap-register-debug-template
+   "Python :: Run module"
+   (list :type "python"
+         :request "launch"
+         :name "Python :: Run module"
+         ;; Wrap read-from-minibuffer in lambda to defer execution
+         :module (lambda () (read-from-minibuffer "Python module: "))
+         :args (lambda () (read-from-minibuffer "Arguments: ")))))
+
+;; Removed the separate dap-python block as its config is now merged above
 
 (use-package yasnippet
   :ensure t
