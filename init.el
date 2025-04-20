@@ -20,6 +20,10 @@
 (global-auto-revert-mode)
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+
+(use-package vterm
+    :ensure t)
+
 (load-config "complete.el")
 (load-config "ai.el")
 (load-config "programming.el")

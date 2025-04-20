@@ -20,6 +20,8 @@ Return the secret string or an empty string if not found or on error."
   (setenv "OPENROUTER_API_KEY" secret-token-openrouter)
   :custom
   (aidermacs-use-architect-mode t)
-  (aidermacs-architect-model "openrouter/google/gemini-2.5-pro-preview-03-25")
-  (aidermacs-editor-model "openrouter/google/gemini-2.0-flash-001")
+  (aidermacs-backend 'vterm)
+  (aidermacs-default-model "openrouter/google/gemini-2.5-pro-preview-03-25")
+;  (aidermacs-architect-model "openrouter/google/gemini-2.5-pro-preview-03-25")
+;  (aidermacs-editor-model "openai/gpt-4.1-nano")
   )
