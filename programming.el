@@ -30,7 +30,7 @@
   (setq dap-python-debugger 'debugpy) ;; Explicitly use debugpy
   ;; Load dap-python *after* dap-mode is loaded and configured
   (require 'dap-python)
-  ;; Define Python debug templates
+  (require 'dap-gdb)
   )
 
 ;; Removed the separate dap-python block as its config is now merged above
