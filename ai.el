@@ -25,3 +25,17 @@ Return the secret string or an empty string if not found or on error."
   (aidermacs-architect-model "openrouter/google/gemini-2.5-pro-preview-03-25")
   (aidermacs-editor-model "openrouter/google/gemini-2.0-flash-001")
   )
+
+(use-package gptel
+  :ensure t
+  :config
+  (setq gptel-backend (gptel-make-openai "OpenRouter"
+			:host "openrouter.ai"
+			:endpoint "/api/v1/chat/completions"
+			:stream t
+			:key secret-token-openrouter
+			:models '(google/gemini-2.5-pro-preview
+				  google/gemini-2.5-flash-preview
+				  google/gemini-2.5-flash-preview:thinking)))
+  (setq gptel-model 'google/gemini-2.5-flash-preview:thinking)
+  )

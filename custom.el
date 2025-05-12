@@ -10,7 +10,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    '(aidermacs bitbake-ts-mode cmake-mode consult corfu dap-mode direnv
-	       ef-themes groovy-mode lsp-pyright lsp-ui magit
+	       ef-themes gptel groovy-mode lsp-pyright lsp-ui magit
 	       marginalia orderless python-ts-mode vertico vterm
 	       yaml-mode yasnippet)))
 (custom-set-faces
