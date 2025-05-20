@@ -8,6 +8,7 @@
         (clojure    "https://github.com/sogaiu/tree-sitter-clojure")
         (css        "https://github.com/tree-sitter/tree-sitter-css")
         (dart       "https://github.com/tree-sitter/tree-sitter-dart")
+	(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile")
         (elixir     "https://github.com/tree-sitter/tree-sitter-elixir")
         (elm        "https://github.com/Moeriki/tree-sitter-elm")
         (elisp      "https://github.com/Wilfred/tree-sitter-elisp")
