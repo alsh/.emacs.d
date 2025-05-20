@@ -19,11 +19,11 @@ Return the secret string or an empty string if not found or on error."
   (setenv "OLLAMA_API_BASE" "http://127.0.0.1:11434")
   (setenv "OPENROUTER_API_KEY" secret-token-openrouter)
   :custom
-  (aidermacs-use-architect-mode t)
   (aidermacs-backend 'vterm)
-  (aidermacs-default-model "openrouter/google/gemini-2.5-pro-preview-03-25")
-  (aidermacs-architect-model "openrouter/google/gemini-2.5-pro-preview-03-25")
-  (aidermacs-editor-model "openrouter/google/gemini-2.0-flash-001")
+  ;; (aidermacs-use-architect-mode t)
+  ;; (aidermacs-default-model "openrouter/google/gemini-2.5-pro-preview-03-25")
+  ;; (aidermacs-architect-model "openrouter/google/gemini-2.5-pro-preview-03-25")
+  ;; (aidermacs-editor-model "openrouter/google/gemini-2.0-flash-001")
   )
 
 (use-package gptel
