@@ -27,6 +27,7 @@
 (load-config "complete.el")
 (load-config "ai.el")
 (load-config "programming.el")
+(load-config "ui.el")
 
 (use-package yaml-mode
   :ensure t
@@ -67,4 +68,3 @@
 
 ;; Programming modes
 (use-package c-ts-mode :ensure t)
-
