@@ -35,7 +35,22 @@ Return the secret string or an empty string if not found or on error."
 			:stream t
 			:key secret-token-openrouter
 			:models '(google/gemini-2.5-pro-preview
-				  google/gemini-2.5-flash-preview
-				  google/gemini-2.5-flash-preview:thinking)))
-  (setq gptel-model 'google/gemini-2.5-flash-preview:thinking)
+				  google/gemini-2.5-flash-preview-05-20
+				  google/gemini-2.5-flash-preview-05-20:thinking)))
+  (setq gptel-model 'google/gemini-2.5-flash-preview-05-20:thinking)
+  )
+
+(use-package mcp
+  :ensure t
+  :after gptel
+  :custom (mcp-hub-servers
+	   `(("basic-memory" . (:command "uvx" :args ("basic-memory" "mcp")))
+	     ("blender-mcp" . (:command "uvx" :args ("blender-mcp")))
+	     ("mcp-server-deep-research" . (:command "uvx" :args ("mcp-server-deep-research")))
+	     )
+	   )
+  :config
+  (require 'mcp-hub)
+  (require 'gptel-integrations)
+  :hook (after-init . mcp-hub-start-all-server)
   )

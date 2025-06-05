@@ -22,7 +22,9 @@
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 (use-package vterm
-    :ensure t)
+  :ensure t)
+(use-package p-search
+  :ensure t)
 
 (load-config "complete.el")
 (load-config "ai.el")
