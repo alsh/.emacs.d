@@ -45,3 +45,6 @@
   :ensure t
   :config
   (direnv-mode))
+
+(use-package meson-mode
+  :ensure t)
