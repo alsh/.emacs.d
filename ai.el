@@ -47,6 +47,7 @@ Return the secret string or an empty string if not found or on error."
 	   `(("basic-memory" . (:command "uvx" :args ("basic-memory" "mcp")))
 	     ("blender-mcp" . (:command "uvx" :args ("blender-mcp")))
 	     ("mcp-server-deep-research" . (:command "uvx" :args ("mcp-server-deep-research")))
+	     ("mcp-solver-z3" . (:command "uv" :args ("--directory" "/home/alexeys/src/mcp-solver" "run" "mcp-solver-z3")))
 	     )
 	   )
   :config
