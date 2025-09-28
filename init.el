@@ -52,7 +52,9 @@
   ;; Hide commands in M-x which do not apply to the current mode.  Corfu
   ;; commands are hidden, since they are not used via M-x. This setting is
   ;; useful beyond Corfu.
-  (read-extended-command-predicate #'command-completion-default-include-p))
+  (read-extended-command-predicate #'command-completion-default-include-p)
+  :config
+  (set-default indent-tabs-mode nil))
 
 ;; Visual
 ;; (use-package eink-theme
@@ -68,5 +70,7 @@
 ;; Languages
 (load-config "tree-sitter-grammars")
 
-;; Programming modes
-(use-package c-ts-mode :ensure t)
+(use-package direnv
+  :ensure t
+  :config
+  (direnv-mode))

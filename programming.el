@@ -5,6 +5,13 @@
 (use-package bitbake-ts-mode :ensure t)
 (use-package groovy-mode :ensure t)
 
+;; Programming modes
+(use-package c-ts-mode
+  :ensure t
+  :config
+  (setq c-ts-mode-indent-style 'bsd)
+  (setq c-ts-mode-indent-offset 2))
+
 (use-package lsp-mode
   :ensure t
   :init
@@ -41,10 +48,8 @@
 
 (use-package magit :ensure t)
 
-(use-package direnv
-  :ensure t
-  :config
-  (direnv-mode))
-
 (use-package meson-mode
+  :ensure t)
+
+(use-package tidal
   :ensure t)

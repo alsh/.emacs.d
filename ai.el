@@ -55,3 +55,5 @@ Return the secret string or an empty string if not found or on error."
   (require 'gptel-integrations)
   :hook (after-init . mcp-hub-start-all-server)
   )
+
+(use-package elisp-dev-mcp :ensure t)

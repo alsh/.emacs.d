@@ -9,10 +9,10 @@
      default))
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(aidermacs bitbake-ts-mode cmake-mode consult corfu dap-mode direnv
-	       ef-themes gptel groovy-mode ligature lsp-pyright lsp-ui
-	       magit marginalia mcp orderless p-search python-ts-mode
-	       vertico vterm yaml-mode yasnippet)))
+   '(aidermacs bitbake-ts-mode consult corfu dap-mode direnv ef-themes
+	       elisp-dev-mcp gptel groovy-mode ligature lsp-pyright
+	       lsp-ui magit marginalia mcp meson-mode orderless
+	       p-search scel tidal vertico vterm yaml-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
