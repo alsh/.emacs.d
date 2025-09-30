@@ -5,6 +5,8 @@
 (use-package bitbake-ts-mode :ensure t)
 (use-package groovy-mode :ensure t)
 
+(use-package project-cmake :ensure t)
+
 ;; Programming modes
 (use-package c-ts-mode
   :ensure t

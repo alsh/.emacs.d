@@ -74,3 +74,23 @@
   :ensure t
   :config
   (direnv-mode))
+
+(use-package org-mem
+  :ensure t
+  :defer
+  :config
+  ;; At least one of these two is needed
+  (setq org-mem-do-sync-with-org-id t)
+  (setq org-mem-watch-dirs
+        (list "~/Documents")) ;; Configure me
+  (org-mem-updater-mode))
+
+(use-package org-node
+  :ensure t
+  :init
+  ;; Optional key bindings
+  (keymap-global-set "M-o n" org-node-global-prefix-map)
+  (with-eval-after-load 'org
+    (keymap-set org-mode-map "M-o n" org-node-org-prefix-map))
+  :config
+  (org-node-cache-mode))
