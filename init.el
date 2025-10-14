@@ -56,6 +56,11 @@
   :config
   (set-default indent-tabs-mode nil))
 
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 ;; Visual
 ;; (use-package eink-theme
 ;;   :ensure t
