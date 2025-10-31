@@ -11,7 +11,7 @@
  '(package-selected-packages
    '(aidermacs bitbake-ts-mode consult corfu dap-mode direnv ef-themes
 	       elisp-dev-mcp gptel groovy-mode ligature lsp-pyright
-	       lsp-ui magit marginalia mcp meson-mode orderless
+	       lsp-ui magit marginalia mason mcp meson-mode orderless
 	       org-mem org-node p-search project-cmake restclient scel
 	       tidal vertico vterm yaml-mode yasnippet)))
 (custom-set-faces

@@ -2,6 +2,14 @@
 (setq major-mode-remap-alist
       '((python-mode . python-ts-mode)))
 
+(use-package mason
+  :ensure t
+  :config
+  (mason-ensure)
+  ;; or
+  :hook
+  (after-init-hook . mason-ensure))
+
 (use-package bitbake-ts-mode :ensure t)
 (use-package groovy-mode :ensure t)
 
