@@ -12,7 +12,7 @@
   :ensure t
   :config
   (setq c-ts-mode-indent-style 'bsd)
-  (setq c-ts-mode-indent-offset 2))
+  (setq c-ts-mode-indent-offset 4))
 
 (use-package lsp-mode
   :ensure t
