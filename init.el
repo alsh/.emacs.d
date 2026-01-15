@@ -70,7 +70,7 @@
 (use-package ef-themes
   :ensure t
   :config
-  (ef-themes-select 'ef-duo-light))
+  (modus-themes-load-theme 'ef-duo-light))
 
 ;; Languages
 (load-config "tree-sitter-grammars")
