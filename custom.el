@@ -12,8 +12,8 @@
    '(aidermacs bitbake-ts-mode consult corfu dap-mode direnv ef-themes
 	       elisp-dev-mcp gptel groovy-mode ligature lsp-pyright
 	       lsp-ui magit marginalia mcp meson-mode orderless
-	       org-mem org-node p-search project-cmake scel tidal
-	       vertico vterm yaml-mode yasnippet)))
+	       org-mem org-node p-search project-cmake restclient scel
+	       tidal vertico vterm yaml-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

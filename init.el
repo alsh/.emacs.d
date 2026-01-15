@@ -80,6 +80,8 @@
   :config
   (direnv-mode))
 
+(use-package restclient :ensure t)
+
 (use-package org-mem
   :ensure t
   :defer
