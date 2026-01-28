@@ -54,7 +54,7 @@
   ;; useful beyond Corfu.
   (read-extended-command-predicate #'command-completion-default-include-p)
   :config
-  (set-default indent-tabs-mode nil))
+  (set-default 'indent-tabs-mode nil))
 
 (use-package editorconfig
   :ensure t
