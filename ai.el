@@ -34,11 +34,10 @@ Return the secret string or an empty string if not found or on error."
 			:endpoint "/api/v1/chat/completions"
 			:stream t
 			:key secret-token-openrouter
-			:models '(google/gemini-2.5-pro-preview
-				  google/gemini-2.5-flash-preview-05-20
-				  google/gemini-2.5-flash-preview-05-20:thinking)))
-  (setq gptel-model 'google/gemini-2.5-flash-preview-05-20:thinking)
-  )
+			:models '(google/gemini-3-pro-preview
+                                  openai/gpt-5.2
+                                  google/gemini-3-flash-preview)))
+  (setq gptel-model 'google/gemini-3-flash-preview))
 
 (use-package mcp
   :ensure t
