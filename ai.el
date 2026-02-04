@@ -39,6 +39,8 @@ Return the secret string or an empty string if not found or on error."
                                   google/gemini-3-flash-preview)))
   (setq gptel-model 'google/gemini-3-flash-preview))
 
+(use-package gptel-aibo :ensure t)
+
 (use-package mcp
   :ensure t
   :after gptel
