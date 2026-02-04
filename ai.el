@@ -37,9 +37,20 @@ Return the secret string or an empty string if not found or on error."
 			:models '(google/gemini-3-pro-preview
                                   openai/gpt-5.2
                                   google/gemini-3-flash-preview)))
-  (setq gptel-model 'google/gemini-3-flash-preview))
+  (setq gptel-model 'google/gemini-3-flash-preview)
+  ;; Enable use tools by default
+  (setq gptel-use-tools t))
 
 (use-package gptel-aibo :ensure t)
+
+;; Include local llm tools submodule
+(let ((llm-tool-dir "~/.emacs.d/lib/llm-tool-collection"))
+  (when (file-directory-p llm-tool-dir)
+    (add-to-list 'load-path llm-tool-dir)
+    (require 'llm-tool-collection)
+    (mapcar (apply-partially #'apply #'gptel-make-tool)
+            (llm-tool-collection-get-all))))
+
 
 (use-package mcp
   :ensure t
