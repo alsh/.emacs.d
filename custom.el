@@ -13,8 +13,8 @@
                elisp-dev-mcp gptel gptel-aibo groovy-mode ligature
                lsp-pyright lsp-ui magit marginalia mason mcp
                meson-mode orderless org-mem org-node p-search
-               project-cmake restclient scel tidal vertico vterm
-               yaml-mode yasnippet)))
+               project-cmake restclient scel tidal use-package-treesit
+               vertico vterm yaml-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

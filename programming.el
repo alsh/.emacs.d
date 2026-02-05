@@ -18,9 +18,17 @@
 ;; Programming modes
 (use-package c-ts-mode
   :ensure t
+  :treesit
   :config
   (setq c-ts-mode-indent-style 'bsd)
   (setq c-ts-mode-indent-offset 4))
+(use-package c++-ts-mode
+  :treesit
+  :config
+  (setq c-ts-mode-indent-style 'bsd)
+  (setq c-ts-mode-indent-offset 4))
+
+(use-package json-ts-mode :ensure t)
 
 (use-package lsp-mode
   :ensure t

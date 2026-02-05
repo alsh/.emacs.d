@@ -25,6 +25,7 @@
   :ensure t)
 (use-package p-search
   :ensure t)
+(use-package use-package-treesit :ensure t)
 
 (load-config "complete.el")
 (load-config "ai.el")
