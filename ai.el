@@ -42,6 +42,8 @@ Return the secret string or an empty string if not found or on error."
   (setq gptel-use-tools t))
 
 (use-package gptel-aibo :ensure t)
+(use-package gptel-agent :ensure t)
+(gptel-agent-update)
 
 ;; Include local llm tools submodule
 (let ((llm-tool-dir "~/.emacs.d/lib/llm-tool-collection"))
