@@ -10,8 +10,8 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    '(aidermacs bitbake-ts-mode consult corfu dap-mode direnv ef-themes
-               elisp-dev-mcp gptel gptel-aibo groovy-mode ligature
-               lsp-pyright lsp-ui magit marginalia mason mcp
+               elisp-dev-mcp gptel gptel-agent gptel-aibo groovy-mode
+               ligature lsp-pyright lsp-ui magit marginalia mason mcp
                meson-mode orderless org-mem org-node p-search
                project-cmake restclient scel tidal use-package-treesit
                vertico vterm yaml-mode yasnippet)))
