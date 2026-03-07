@@ -35,7 +35,9 @@ Return the secret string or an empty string if not found or on error."
 			:stream t
 			:key secret-token-openrouter
 			:models '(google/gemini-3-pro-preview
+                                  openai/gpt-5.2-chat
                                   openai/gpt-5.2
+                                  anthropic/claude-opus-4.6
                                   google/gemini-3-flash-preview)))
   (setq gptel-model 'google/gemini-3-flash-preview)
   ;; Enable use tools by default
