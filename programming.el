@@ -41,6 +41,8 @@
 	 (c-ts-mode . lsp)
 	 (c++-ts-mode . lsp)
          (python-ts-mode . lsp)
+         (rust-mode . lsp)
+         (rust-ts-mode . lsp)
          ;; if you want which-key integration
          (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
@@ -70,4 +72,7 @@
   :ensure t)
 
 (use-package tidal
+  :ensure t)
+
+(use-package rust-mode
   :ensure t)

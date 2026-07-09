@@ -75,3 +75,5 @@ Return the secret string or an empty string if not found or on error."
 (use-package elisp-dev-mcp :ensure t)
 
 (use-package eca :ensure t)
+
+(use-package pi-coding-agent :ensure t)

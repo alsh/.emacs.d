@@ -73,6 +73,12 @@
   :config
   (modus-themes-load-theme 'ef-duo-light))
 
+(use-package kusanagi-theme
+  :ensure t
+  :config
+  ;;(load-theme 'kusanagi t)
+  )
+
 ;; Languages
 (load-config "tree-sitter-grammars")
 
@@ -102,3 +108,4 @@
     (keymap-set org-mode-map "M-o n" org-node-org-prefix-map))
   :config
   (org-node-cache-mode))
+(put 'scroll-left 'disabled nil)
