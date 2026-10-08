@@ -1,3 +1,6 @@
+;; -*- lexical-binding: t; -*-
+
+
 ;; (setq treesit-language-source-alist
 ;;       '((ada        "https://github.com/tree-sitter/tree-sitter-ada")
 ;;         (bash       "https://github.com/tree-sitter/tree-sitter-bash")

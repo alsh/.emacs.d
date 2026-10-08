@@ -1,4 +1,4 @@
-;; ui.el
+;; -*- lexical-binding: t; -*-
 ;; This file contains configurations related to Emacs user interface,
 ;; including fonts, visual settings, themes, and interaction modes.
 ;; Future UI-related configurations should be placed here.

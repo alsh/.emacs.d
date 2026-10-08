@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (defun get-secret-safely (collection key)
   "Retrieve a secret using secrets-get-secret, handling errors.
 Return the secret string or an empty string if not found or on error."
@@ -10,21 +11,21 @@ Return the secret string or an empty string if not found or on error."
 (setq secret-token-gemini (get-secret-safely "Login" "gemini-api-key"))
 (setq secret-token-openrouter (get-secret-safely "Login" "openrouter-aider"))
 
-(use-package aidermacs
-  :ensure t
-  :bind (("C-c a" . aidermacs-transient-menu))
-  :config
-  (setenv "OPENAI_API_KEY" secret-token-openai)
-  (setenv "GEMINI_API_KEY" secret-token-gemini)
-  (setenv "OLLAMA_API_BASE" "http://127.0.0.1:11434")
-  (setenv "OPENROUTER_API_KEY" secret-token-openrouter)
-  :custom
-  (aidermacs-backend 'vterm)
-  ;; (aidermacs-use-architect-mode t)
-  ;; (aidermacs-default-model "openrouter/google/gemini-2.5-pro-preview-03-25")
-  ;; (aidermacs-architect-model "openrouter/google/gemini-2.5-pro-preview-03-25")
-  ;; (aidermacs-editor-model "openrouter/google/gemini-2.0-flash-001")
-  )
+;; (use-package aidermacs
+;;   :ensure t
+;;   :bind (("C-c a" . aidermacs-transient-menu))
+;;   :config
+;;   (setenv "OPENAI_API_KEY" secret-token-openai)
+;;   (setenv "GEMINI_API_KEY" secret-token-gemini)
+;;   (setenv "OLLAMA_API_BASE" "http://127.0.0.1:11434")
+;;   (setenv "OPENROUTER_API_KEY" secret-token-openrouter)
+;;   :custom
+;;   (aidermacs-backend 'vterm)
+;;   ;; (aidermacs-use-architect-mode t)
+;;   ;; (aidermacs-default-model "openrouter/google/gemini-2.5-pro-preview-03-25")
+;;   ;; (aidermacs-architect-model "openrouter/google/gemini-2.5-pro-preview-03-25")
+;;   ;; (aidermacs-editor-model "openrouter/google/gemini-2.0-flash-001")
+;;   )
 
 (use-package gptel
   :ensure t
@@ -34,11 +35,8 @@ Return the secret string or an empty string if not found or on error."
 			:endpoint "/api/v1/chat/completions"
 			:stream t
 			:key secret-token-openrouter
-			:models '(google/gemini-3-pro-preview
-                                  openai/gpt-5.2-chat
-                                  openai/gpt-5.2
-                                  anthropic/claude-opus-4.6
-                                  google/gemini-3-flash-preview)))
+			:models '(openai/gpt-6.1-luna
+                                  openai/gpt-6.1-sol)))
   (setq gptel-model 'google/gemini-3-flash-preview)
   ;; Enable use tools by default
   (setq gptel-use-tools t))
@@ -76,4 +74,5 @@ Return the secret string or an empty string if not found or on error."
 
 (use-package eca :ensure t)
 
+(use-package pilish :ensure t)
 (use-package pi-coding-agent :ensure t)

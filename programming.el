@@ -1,4 +1,4 @@
-;; Prefer tree-sitter modes when available
+;; Prefer tree-sitter modes when available  -*- lexical-binding: t; -*-
 (setq major-mode-remap-alist
       '((python-mode . python-ts-mode)))
 
